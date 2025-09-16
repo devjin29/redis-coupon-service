@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Import;
 public class CouponConsumerApplication {
 
     public static void main(String[] args) {
+        //멀티모듈설정
         System.setProperty("spring.config.name", "application-core,application-consumer");
         SpringApplication.run(CouponConsumerApplication.class, args);
     }

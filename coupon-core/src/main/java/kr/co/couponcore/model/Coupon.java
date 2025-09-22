@@ -2,6 +2,7 @@ package kr.co.couponcore.model;
 
 import jakarta.persistence.*;
 import kr.co.couponcore.exception.CouponIssueException;
+import kr.co.couponcore.exception.ErrorCode;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -49,6 +50,9 @@ public class Coupon extends BaseTimeEntity {
     @Column(nullable = false)
     private LocalDateTime dateIssueEnd;
 
+    //가능한 쿠폰 발급 수량
+    //totalQuantity : 발급 최대 수량
+    //issuedQuantity : 발급된 쿠폰 수량
     public boolean availableIssueQuantity() {
         if (totalQuantity == null) {
             return true;

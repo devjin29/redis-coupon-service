@@ -19,6 +19,7 @@ public class CouponIssueRequestService {
     private final Logger log = LoggerFactory.getLogger(this.getClass().getSimpleName());
 
     public void issueRequestV1(CouponIssueRequestDto requestDto) {
+        //쿠폰발급 API 동시성 이슈 해결
         synchronized (this) {
             couponIssueService.issue(requestDto.couponId(), requestDto.userId());//DTO에서 꺼내서 메서드 호출
         }

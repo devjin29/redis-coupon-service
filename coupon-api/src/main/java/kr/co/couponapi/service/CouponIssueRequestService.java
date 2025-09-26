@@ -1,0 +1,36 @@
+package kr.co.couponapi.service;
+
+import kr.co.couponapi.controller.dto.CouponIssueRequestDto;
+import kr.co.couponcore.service.CouponIssueService;
+import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
+
+@RequiredArgsConstructor
+@Service
+public class CouponIssueRequestService {
+
+    // couponcore의 CouponIssueService를 받아와서 사용
+    private final CouponIssueService couponIssueService;
+//    private final AsyncCouponIssueServiceV1 asyncCouponIssueServiceV1;
+//    private final AsyncCouponIssueServiceV2 asyncCouponIssueServiceV2;
+//    private final DistributeLockExecutor distributeLockExecutor;
+    private final Logger log = LoggerFactory.getLogger(this.getClass().getSimpleName());
+
+    public void issueRequestV1(CouponIssueRequestDto requestDto) {
+        synchronized (this) {
+            couponIssueService.issue(requestDto.couponId(), requestDto.userId());//DTO에서 꺼내서 메서드 호출
+        }
+        log.info("쿠폰 발급 완료. couponId: %s, userId: %s".formatted(requestDto.couponId(), requestDto.userId()));
+
+    }
+//
+//    public void asyncIssueRequestV1(CouponIssueRequestDto requestDto) {
+//        asyncCouponIssueServiceV1.issue(requestDto.couponId(), requestDto.userId());
+//    }
+//
+//    public void asyncIssueRequestV2(CouponIssueRequestDto requestDto) {
+//        asyncCouponIssueServiceV2.issue(requestDto.couponId(), requestDto.userId());
+//    }
+}

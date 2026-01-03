@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 @Service
 public class CouponIssueRequestService {
-
+//commit Test
     // couponcore의 CouponIssueService를 받아와서 사용
     private final CouponIssueService couponIssueService;
 //    private final AsyncCouponIssueServiceV1 asyncCouponIssueServiceV1;

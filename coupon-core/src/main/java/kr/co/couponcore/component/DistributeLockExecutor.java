@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 @RequiredArgsConstructor
 @Component
 public class DistributeLockExecutor {
-
+// test commit
     private final RedissonClient redissonClient;
     private final Logger log = LoggerFactory.getLogger(this.getClass().getSimpleName());
 

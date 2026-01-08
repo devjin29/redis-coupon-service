@@ -1,8 +1,6 @@
 package kr.co.couponcore.service;
 
-import jakarta.persistence.Table;
 import kr.co.couponcore.exception.CouponIssueException;
-import kr.co.couponcore.exception.ErrorCode;
 import kr.co.couponcore.model.Coupon;
 import kr.co.couponcore.model.CouponIssue;
 import kr.co.couponcore.repository.mysql.CouponIssueJpaRepository;

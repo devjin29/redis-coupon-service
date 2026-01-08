@@ -1,4 +1,4 @@
-package kr.co.couponcore.Configuration;
+package kr.co.couponcore.configuration;
 
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;

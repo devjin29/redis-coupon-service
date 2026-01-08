@@ -1,4 +1,4 @@
-package kr.co.couponcore.Configuration;
+package kr.co.couponcore.configuration;
 
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import jakarta.persistence.EntityManager;

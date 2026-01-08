@@ -2,7 +2,6 @@ package kr.co.couponcore.service;
 
 import kr.co.couponcore.TestConfig;
 import kr.co.couponcore.exception.CouponIssueException;
-import kr.co.couponcore.exception.ErrorCode;
 import kr.co.couponcore.model.Coupon;
 import kr.co.couponcore.model.CouponIssue;
 import kr.co.couponcore.model.CouponType;
@@ -18,7 +17,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.time.LocalDateTime;
 
 import static kr.co.couponcore.exception.ErrorCode.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 class CouponIssueServiceTest extends TestConfig {
 

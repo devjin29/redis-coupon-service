@@ -46,6 +46,9 @@ Redis 기반 선착순 쿠폰 발급 시스템을 설계·구현하였습니다.
    
 2. 성능 테스트 중 동시성 문제 발견
    - 제한 수량 초과 발급 발생
+   - 동시성 이슈 해결 위해 MySQL 분산락 설정 후, 동시성 이슈는 해결하였으나, MySQL 부하가 옴.
+     <img width="1436" height="704" alt="image" src="https://github.com/user-attachments/assets/405c6142-f946-449e-acaf-935ed73a0959" />
+
    
 
 ## Main Feature

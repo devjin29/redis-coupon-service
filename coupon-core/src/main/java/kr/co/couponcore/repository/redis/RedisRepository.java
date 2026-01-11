@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class RedisRepository {
 
-    //RedisTemplate → ZADD 호출
+    //RedisTemplate빈주입 → ZADD 호출
     private final RedisTemplate<String, String> redisTemplate;
 
     public Boolean zAdd(String key, String value, double score) {

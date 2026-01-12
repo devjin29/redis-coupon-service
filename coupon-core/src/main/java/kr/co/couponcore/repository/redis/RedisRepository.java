@@ -12,6 +12,7 @@ public class RedisRepository {
     private final RedisTemplate<String, String> redisTemplate;
 
     public Boolean zAdd(String key, String value, double score) {
+        //같은 값 요청 들어올경우, 저장 방지(ZADD NX옵션)
         return redisTemplate.opsForZSet().addIfAbsent(key, value, score);
     }
 }
